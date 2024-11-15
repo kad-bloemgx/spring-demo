@@ -34,6 +34,15 @@ jobs:
    # - name: Build the Docker image
    #   run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
 
+         # Build image using Buildah action
+    - name: Build Image
+      id: build_image
+      uses: redhat-actions/buildah-build@v2
+      with:
+        image: ${{ env.IMAGE_NAME }}
+        tags: ${{ env.IMAGE_TAGS }}
+        oci: true
+
 
     - name: Push To GHCR
       uses: ./
