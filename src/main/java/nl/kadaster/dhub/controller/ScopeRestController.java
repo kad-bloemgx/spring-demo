@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package nl.kadaster.dhub.controller;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.GetMapping;

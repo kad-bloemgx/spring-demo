@@ -1,0 +1,24 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  namespace: default
+  name: demo-oauth
+  labels:
+    app: demo-oauth
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo-oauth
+  template:
+    metadata:
+      labels:
+        app: demo-oauth
+    spec:
+      containers:
+        - name: demo-oauth
+          image: guru0468/demo-oauth
+          ports:
+            - name: web
+              containerPort: 8090

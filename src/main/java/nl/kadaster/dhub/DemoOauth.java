@@ -1,4 +1,4 @@
-package com.example.demo;
+package nl.kadaster.dhub;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,10 +12,10 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 @EnableMethodSecurity
 //@EnableWebSecurity
 
-public class DemoApplication {
+public class DemoOauth {
 
     public static void main(String[] args) {
-        SpringApplication.run(DemoApplication.class, args);
+        SpringApplication.run(DemoOauth.class, args);
     }
 
 }
