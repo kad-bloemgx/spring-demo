@@ -4,11 +4,8 @@ metadata:
   name: demo-oauth
 
 spec:
-  type: NodePort
-  ports:
-    - nodePort: 30168
-      port: 8090
-      targetPort: 8090
-      protocol: TCP
   selector:
     app: demo-oauth
+  ports:
+    - protocol: TCP
+      port: 8090

@@ -14,6 +14,9 @@ public class ScopeRestController {
      */
     public String currentScopes(Authentication authentication) {
 
+        System.out.println(authentication.getName());
+        System.out.println(authentication.getDetails().toString());
         return authentication.getAuthorities().toString();
+
     }
 }
